@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { config, explorer } from "@/lib/config";
+import { SearchPalette } from "./SearchPalette";
 import { PlimsollMark } from "./ui";
 
 const NAV = [
@@ -52,6 +53,7 @@ export function Header() {
           Plimsoll
         </Link>
         <span className="net-pill">{config.networkName}</span>
+        <SearchPalette />
         <button
           ref={button}
           type="button"
